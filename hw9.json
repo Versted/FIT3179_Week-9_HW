@@ -16,15 +16,14 @@
  "url": "https://versted.github.io/FIT3179_Week-9_HW/data/data.csv"
  },
  "key": "Country",
- "fields": ["Deaths"]
+ "fields": ["DeathsPer100000Population","EstimatedNumberOfRoadTrafficDeaths"]
  }
- },
- {"calculate": "datum.Active + 0.1", "as": "Active Cases"}
+ }
  ],
  "mark": {"type": "geoshape"},
  "encoding": {
     "color": {
-        "field": "Deaths",
+        "field": "DeathsPer100000Population",
         "type": "quantitative",
         "scale": {
             "type": "threshold",
@@ -34,9 +33,9 @@
  },
  "tooltip": [
  {"field": "properties.admin", "type": "nominal", "title": "Country"},
- {"field": "Deaths", "type": "quantitative", "title": "Deaths"}
+ {"field": "EstimatedNumberOfRoadTrafficDeaths", "type": "nominal", "title": "Estimated Number of Deaths"},
+ {"field": "DeathsPer100000Population", "type": "quantitative", "title": "Deaths per 100,000 population"}
  ]
  }
 }
-
 
