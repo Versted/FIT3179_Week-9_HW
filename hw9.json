@@ -5,12 +5,12 @@
  "height": 600,
  "projection": {"type": "equirectangular"},
  "data": {
- "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
- "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+ "url": "https://versted.github.io/FIT3179_Week-9_HW/data/earth.topojson",
+ "format": {"type": "topojson", "feature": "earth"}
  },
  "transform": [
  {
- "lookup": "properties.NAME",
+ "lookup": "properties.admin",
  "from": {
  "data": {
  "url": "https://versted.github.io/FIT3179_Week-9_HW/data/data.csv"
@@ -33,8 +33,10 @@
  }
  },
  "tooltip": [
- {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+ {"field": "properties.admin", "type": "nominal", "title": "Country"},
  {"field": "Deaths", "type": "quantitative", "title": "Deaths"}
  ]
  }
 }
+
+
